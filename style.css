@@ -1,0 +1,111 @@
+.container {
+    height: 15vh;
+    background-color: black;
+}
+
+.div , .list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.list li {
+    position: relative;
+}
+
+.logo{
+    height: 50%;
+    margin: 4vh;
+    width: 30%;
+}
+
+.logo-link {
+    margin-left: 20%;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.navigation{
+    margin: 5.5vh 5vw;
+    width: 50%;
+}
+
+.link {
+    color: aliceblue;
+    font-size: medium;
+    font-weight: lighter;
+    position: relative;
+    text-decoration: none;
+}
+
+a.link::after {
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+a.link:hover::after {
+    width: 100%;
+}
+
+a.home::after {
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: auto;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.menuitem {
+    color: black;
+}
+
+.menu1 li , .menu2 li {
+    padding: 10px;
+}
+
+.menu1 {
+    display: none;
+}
+
+.navigation ul li:hover .menu1, .menu1:hover { 
+    display: block;
+    position: absolute;
+    background-color: rgb(247, 246, 246);
+    top: 40px;
+    width: max-content;
+    border-radius: 3%;
+}
+
+.menu2 {
+    display: none;
+    position: absolute;
+    background-color: rgb(247, 246, 246);
+    top: 10px;
+    right: 10vw;
+    width: max-content;
+    border-radius: 3%;
+}
+
+.menu1 ul li:hover .menu2,
+.menu2:hover {
+    display: block;
+}
